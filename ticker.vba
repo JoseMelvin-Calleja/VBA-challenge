@@ -41,8 +41,8 @@ Sub ticker()
                 finish = ws.Cells(i, 6).Value
                 'assigning the values to the outcome table
                 ws.Cells(pos, 9).Value = Cells(i, 1).Value
-                ws.Cells(pos, 10).Value = start - finish
-                ws.Cells(pos, 11).Value = (start - finish) / start
+                ws.Cells(pos, 10).Value = finish - start
+                ws.Cells(pos, 11).Value = (finish - start) / start
                 ws.Cells(pos, 12).Value = vol
                 'resetting the vol and count
                 vol = 0
@@ -73,6 +73,7 @@ Sub ticker()
         ws.Cells(4, 15).Value = "Greatest Total Volume"
         ws.Cells(1, 16).Value = "Ticker"
         ws.Cells(1, 17).Value = "Value"
+        ws.Range("Q2:Q3").NumberFormat = "0.00%"
                 
         great_increase = ws.Cells(2, 11).Value
         greart_decrease = ws.Cells(2, 11).Value
