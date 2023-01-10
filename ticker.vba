@@ -79,7 +79,7 @@ Sub ticker()
         great_volume = ws.Cells(2, 12).Value
         
         For i = 2 To lastrowtable
-            If ws.Cells(i, 11).Value > great_increse Then
+            If ws.Cells(i, 11).Value > great_increase Then
                 great_increase = ws.Cells(i, 11).Value
                 great_increase_name = ws.Cells(i, 9).Value
             End If
